@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest an idea or an improvement for Rig Mentor.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Rig Mentor to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help?
+      description: The problem it solves, or the kind of character or workflow it is for.
