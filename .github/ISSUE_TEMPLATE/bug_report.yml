@@ -1,0 +1,78 @@
+name: Bug report
+description: Something in Rig Mentor doesn't work as expected.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem with Rig Mentor! The more of this you fill in, the faster it can be fixed.
+  - type: input
+    id: rig-mentor-version
+    attributes:
+      label: Rig Mentor version
+      description: Edit > Preferences > Add-ons, then expand Rig Mentor.
+      placeholder: "1.0.2"
+    validations:
+      required: true
+  - type: input
+    id: blender-version
+    attributes:
+      label: Blender version
+      description: Help > About Blender.
+      placeholder: "5.0.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Rig Mentor?
+      options:
+        - Place Points
+        - Edit Points
+        - Generate Armature (Regular)
+        - Generate Armature (Rigify Basic or Rigify Complex)
+        - Face Rig
+        - Undo / Redo
+        - Installing or enabling the add-on
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Select the character's mesh
+        2. Press Place Points and click the head, a wrist, the hips and an ankle
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message
+      description: If Blender showed an error, paste it here. On Windows, open Window > Toggle System Console to see it; on macOS and Linux, start Blender from a terminal.
+      render: shell
+  - type: textarea
+    id: files
+    attributes:
+      label: Screenshots or .blend file
+      description: Drag images or a zipped .blend file into this box. A small file that shows the problem helps the most.
